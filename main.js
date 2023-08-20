@@ -18,6 +18,6 @@ searchIcon.addEventListener("click", () => {
 });
 
 // Initialization for ES Users
-import { Carousel, Dropdown, Ripple, initTE } from "tw-elements";
+import { Carousel, Dropdown, Ripple, Lightbox, initTE } from "tw-elements";
 
-initTE({ Carousel, Dropdown, Ripple });
+initTE({ Carousel, Dropdown, Ripple, Lightbox });
