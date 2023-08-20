@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="main.js" defer></script>
+    <script
+      type="text/javascript"
+      src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"
+    ></script>
+    <title>Vite App</title>
+  </head>
+  <body class="max-w-8xl">
+    <header
+      class="header flex justify-between items-center min-h-[10vh] mx-auto py-6 px-6 font-Inter"
+    >
+      <a href="#" class="grow-1">
+        <img src="./images/navigation/logo.svg" alt="logo"
+      /></a>
+      <nav>
+        <ul class="hidden lg:flex items-center">
+          <div class="relative" data-te-dropdown-ref>
+            <a
+              type="button"
+              href="#"
+              class="relative mr-12 duration-500 border-b border-white hover:border-black"
+              id="dropdownMenuButton1"
+              data-te-dropdown-toggle-ref
+              aria-expanded="false"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
+              Oferta
+
+              <img
+                src="./images/navigation/arrow.svg"
+                id=""
+                class="ml-1 cursor-pointer inline origin-center group-hover:rotate-180 duration-300"
+              />
+            </a>
+            <ul
+              class="absolute z-[1000] hidden overflow-hidden rounded-lg bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+              aria-labelledby="dropdownMenuButton1"
+              data-te-dropdown-menu-ref
+            >
+              <li>
+                <a
+                  class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                  href="#projekty"
+                  data-te-dropdown-item-ref
+                  >Projekty</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                  href="#wizualizacje"
+                  data-te-dropdown-item-ref
+                  >Wizualizacje</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                  href="#realizacje"
+                  data-te-dropdown-item-ref
+                  >Realizacje</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- <li class="group">
+            <a
+              href="#"
+              class="relative mr-12 duration-500 border-b border-white hover:border-black"
+              >Oferta
+              <img
+                src="./images/navigation/arrow.svg"
+                id=""
+                class="ml-1 cursor-pointer inline origin-center group-hover:rotate-180 duration-300"
+              />
+            </a>
+            <ul
+              class="absolute z-10 top-[70px] flex flex-col gap-2 justify-center items-start h-0 bg-white group-hover:h-28 px-3 overflow-hidden duration-300 delay-100"
+            >
+              <li><a href="#projekty">Projekty</a></li>
+              <li><a href="#wizualizacje">Wizualizacje</a></li>
+              <li><a href="#realizacje">Realizacje</a></li>
+            </ul>
+          </li> -->
+          <li>
+            <a
+              href="#"
+              class="mr-12 duration-300 duration-500 border-b border-white hover:border-black"
+              >O firmie</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="mr-12 duration-300 duration-500 border-b border-white hover:border-black"
+              >Relizacje</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="mr-8 duration-300 duration-500 border-b border-white hover:border-black"
+              >Kontakt</a
+            >
+          </li>
+
+          <li>
+            <input
+              type="search"
+              id="search-input"
+              class="w-0 duration-300 gap-0 py-2 px-0 outline-none border-b border-black"
+            />
+          </li>
+          <li>
+            <img
+              src="./images/navigation/search.svg"
+              alt="logo"
+              id="search-icon"
+              class="ml-2 cursor-pointer"
+            />
+          </li>
+        </ul>
+        <!-- Hamburger menu  -->
+        <div class="relative flex lg:hidden p-4 cursor-pointer">
+          <span class="absolute top-0 left-0 w-5 h-0.5 bg-black"></span>
+          <span
+            class="absolute top-0 left-0 w-5 h-0.5 bg-black translate-y-1.5"
+          ></span>
+          <span
+            class="absolute top-0 left-0 w-5 h-0.5 bg-black translate-y-3"
+          ></span>
+        </div>
+      </nav>
+    </header>
+    <!-- Intro -->
+    <!-- <section class="" id="intro">
+      <div id="slider">
+        <div
+          class="slide relative grid grid-cols-1 sm:grid-cols-2 max-w-8xl min-h-[90vh] mx-auto duration-500"
+        >
+          <div
+            class="bg-beige flex flex-col justify-center px-6 md:px-8 lg:px-10 xl:px-20 2xl:px-32"
+          >
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-Montserat font-medium pb-5 lg:pb-11 mt-4 lg:mt-8 leading-[116%]"
+            >
+              Nowoczesna aranżacja Twojego ogrodu
+            </h1>
+            <p
+              class="font-Inter text-base font-normal pr-1 xl:pr-6 pb-8 lg:pb-16 leading-6"
+            >
+              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+              realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+              podejściem do każdego projektu.
+            </p>
+            <div class="flex flex-col lg:flex-row gap-4 lg:gap-9">
+              <button
+                class="w-[200px] bg-green text-gray px-6 pt-3 pb-3.5 mb-4 lg:mb-8 rounded-[200px]"
+              >
+                Skontaktuj się z nami
+              </button>
+              <button
+                class="w-[250px] flex items-center bg-transparent text-green pt-3 px-6 pb-3.5 mb-4 lg:mb-8 border border-green rounded-[200px]"
+              >
+                Zobacz nasze realizacje
+                <img
+                  src="./images/intro/vector.svg"
+                  alt=""
+                  class="cursor-pointer pl-2"
+                />
+              </button>
+            </div>
+          </div>
+          <div
+            class="hidden sm:block bg-[url('./images/intro/hero.jpg')] bg-center bg-no-repeat bg-cover scale-x-[-1]"
+          ></div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section>
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full min-h-[90vh]">
+          <div>
+            <div
+              class="slide relative grid grid-cols-1 sm:grid-cols-2 max-w-8xl min-h-[90vh] mx-auto duration-500"
+            >
+              <div
+                class="bg-beige flex flex-col justify-center px-6 md:px-8 lg:px-10 xl:px-20 2xl:px-32"
+              >
+                <h1
+                  class="text-4xl md:text-5xl lg:text-6xl font-Montserat font-medium pb-5 lg:pb-11 mt-4 lg:mt-8 leading-[116%]"
+                >
+                  Nowoczesna aranżacja Twojego ogrodu
+                </h1>
+                <p
+                  class="font-Inter text-base font-normal pr-1 xl:pr-6 pb-8 lg:pb-16 leading-6"
+                >
+                  Marka GiardDesign to wieloletnie doświadczenie i wysoka
+                  estetyka realizacji. Oferujemy kompleksowy zakres usług z
+                  indywidualnym podejściem do każdego projektu.
+                </p>
+                <div class="flex flex-col lg:flex-row gap-4 lg:gap-9">
+                  <button
+                    class="w-[200px] bg-green text-gray px-6 pt-3 pb-3.5 mb-4 lg:mb-8 rounded-[200px]"
+                  >
+                    Skontaktuj się z nami
+                  </button>
+                  <button
+                    class="w-[240px] flex items-center bg-transparent text-green pt-3 px-6 pb-3.5 mb-4 lg:mb-8 border border-green rounded-[200px]"
+                  >
+                    Zobacz nasze realizacje
+                    <img
+                      src="./images/intro/vector.svg"
+                      alt=""
+                      class="cursor-pointer pl-2"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div
+                class="hidden sm:block bg-[url('./images/intro/hero.jpg')] bg-center bg-no-repeat bg-cover scale-x-[-1]"
+              ></div>
+            </div>
+          </div>
+
+          <div
+            class="absolute bottom-0 right-0 flex bg-gray flex gap-8 py-3 px-4 md:py-6 md:px-8"
+          >
+            <a href="#slide4"
+              ><img
+                src="./images/intro/Arrow2.svg"
+                alt="arrow-left"
+                class="cursor-pointer"
+                id="left-arrow"
+            /></a>
+            <a href="#slide2">
+              <img
+                src="./images/intro/Arrow1.svg"
+                alt="arrow-right"
+                class="cursor-pointer"
+                id="right-arrow"
+            /></a>
+          </div>
+        </div>
+        <div
+          id="slide2"
+          class="carousel-item relative w-full min-h-[90vh] bg-gray"
+        >
+          slide2
+
+          <div
+            class="absolute bottom-0 right-0 flex bg-gray flex gap-8 py-3 px-4 md:py-6 md:px-8"
+          >
+            <a href="#slide1"
+              ><img
+                src="./images/intro/Arrow2.svg"
+                alt="arrow-left"
+                class="cursor-pointer"
+                id="left-arrow"
+            /></a>
+            <a href="#slide3">
+              <img
+                src="./images/intro/Arrow1.svg"
+                alt="arrow-right"
+                class="cursor-pointer"
+                id="right-arrow"
+            /></a>
+          </div>
+        </div>
+        <div
+          id="slide3"
+          class="carousel-item relative w-full min-h-[90vh] bg-green"
+        >
+          slide3
+
+          <div
+            class="absolute bottom-0 right-0 flex bg-gray flex gap-8 py-3 px-4 md:py-6 md:px-8"
+          >
+            <a href="#slide2"
+              ><img
+                src="./images/intro/Arrow2.svg"
+                alt="arrow-left"
+                class="cursor-pointer"
+                id="left-arrow"
+            /></a>
+            <a href="#slide4">
+              <img
+                src="./images/intro/Arrow1.svg"
+                alt="arrow-right"
+                class="cursor-pointer"
+                id="right-arrow"
+            /></a>
+          </div>
+        </div>
+        <div
+          id="slide4"
+          class="carousel-item relative w-full min-h-[90vh] bg-beige"
+        >
+          slide4
+
+          <div
+            class="absolute bottom-0 right-0 flex bg-gray flex gap-8 py-3 px-4 md:py-6 md:px-8"
+          >
+            <a href="#slide3"
+              ><img
+                src="./images/intro/Arrow2.svg"
+                alt="arrow-left"
+                class="cursor-pointer"
+                id="left-arrow"
+            /></a>
+            <a href="#slide1">
+              <img
+                src="./images/intro/Arrow1.svg"
+                alt="arrow-right"
+                class="cursor-pointer"
+                id="right-arrow"
+            /></a>
+          </div>
+        </div>
+      </div> -->
+
+    <!-- </section> -->
+
+    <div
+      id="carouselExampleCrossfade"
+      class="relative"
+      data-te-carousel-init
+      data-te-ride="carousel"
+    >
+      <!--Carousel items-->
+      <div
+        class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+      >
+        <!--First item-->
+        <div
+          class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+          data-te-carousel-fade
+          data-te-carousel-item
+          data-te-carousel-active
+        >
+          <div
+            class="slide relative grid grid-cols-1 sm:grid-cols-2 min-h-[90vh]"
+          >
+            <div
+              class="bg-beige flex flex-col justify-center px-4 md:px-8 lg:px-10 xl:px-20 2xl:px-32"
+            >
+              <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-Montserat font-medium pb-5 lg:pb-11 mt-4 lg:mt-8 leading-[116%]"
+              >
+                Nowoczesna aranżacja Twojego ogrodu
+              </h1>
+              <p
+                class="font-Inter text-base font-normal pr-1 xl:pr-6 pb-8 lg:pb-16 leading-6"
+              >
+                Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+                realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+                podejściem do każdego projektu.
+              </p>
+              <div class="flex flex-col lg:flex-row gap-4 lg:gap-9">
+                <button
+                  class="w-[200px] bg-green text-gray px-6 pt-3 pb-3.5 mb-4 lg:mb-8 rounded-[200px]"
+                >
+                  Skontaktuj się z nami
+                </button>
+                <button
+                  class="w-[250px] flex items-center bg-transparent text-green pt-3 px-6 pb-3.5 mb-4 lg:mb-8 border border-green rounded-[200px]"
+                >
+                  Zobacz nasze realizacje
+                  <img
+                    src="./images/intro/vector.svg"
+                    alt=""
+                    class="cursor-pointer pl-2"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              class="hidden sm:block bg-[url('./images/intro/hero.jpg')] bg-center bg-no-repeat bg-cover scale-x-[-1]"
+            ></div>
+          </div>
+        </div>
+        <!--Second item-->
+        <div
+          class="relative float-left -mr-[100%] min-h-[90vh] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none bg-green"
+          data-te-carousel-fade
+          data-te-carousel-item
+        ></div>
+
+        <div
+          class="relative float-left -mr-[100%] min-h-[90vh] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none bg-beige"
+          data-te-carousel-fade
+          data-te-carousel-item
+        ></div>
+      </div>
+
+      <!--Carousel controls - prev item-->
+
+      <button
+        class="absolute bottom-0 right-14 md:right-16 z-[1] flex items-center justify-center py-3 px-4 md:py-6 md:px-8 text-center bg-gray"
+        type="button"
+        data-te-target="#carouselExampleCrossfade"
+        data-te-slide="prev"
+      >
+        <img
+          src="./images/intro/Arrow2.svg"
+          alt="arrow-left"
+          class="cursor-pointer"
+          id="left-arrow"
+        />
+
+        <span
+          class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+          >Previous</span
+        >
+      </button>
+      <!--Carousel controls - next item-->
+      <button
+        class="absolute bottom-0 right-0 z-[1] flex items-center justify-center py-3 px-4 md:py-6 md:px-8 text-center bg-gray"
+        type="button"
+        data-te-target="#carouselExampleCrossfade"
+        data-te-slide="next"
+      >
+        <img
+          src="./images/intro/Arrow1.svg"
+          alt="arrow-right"
+          class="cursor-pointer"
+          id="right-arrow"
+        />
+
+        <span
+          class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+          >Next</span
+        >
+      </button>
+    </div>
+    <!-- <script type="module" src="/main.js"></script> -->
+  </body>
+</html>
