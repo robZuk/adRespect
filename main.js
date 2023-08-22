@@ -24,7 +24,7 @@ const galleryGradient = document.getElementById("gallery-gradient");
 
 galleryButton.addEventListener("click", () => {
   gallerySection.classList.remove("h-[1200px]", "overflow-hidden");
-  galleryGradient.classList.replace("h-[70%]", "h-[0%]");
+  galleryGradient.classList.replace("h-[50%]", "h-[0%]");
   galleryButton.classList.add("hidden");
 });
 
