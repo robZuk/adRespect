@@ -17,6 +17,17 @@ searchIcon.addEventListener("click", () => {
   showSearch && searchInput.classList.replace("px-0", "px-2");
 });
 
+//gallery
+const galleryButton = document.getElementById("gallery-button");
+const gallerySection = document.getElementById("gallery-section");
+const galleryGradient = document.getElementById("gallery-gradient");
+
+galleryButton.addEventListener("click", () => {
+  gallerySection.classList.remove("h-[1200px]", "overflow-hidden");
+  galleryGradient.classList.replace("h-[70%]", "h-[0%]");
+  galleryButton.classList.add("hidden");
+});
+
 // Initialization for ES Users
 import { Carousel, Dropdown, Ripple, Lightbox, initTE } from "tw-elements";
 
